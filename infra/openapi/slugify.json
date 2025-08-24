@@ -1,0 +1,29 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "slugify API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/convert/slugify": {
+      "get": {
+        "summary": "Convert text into a URL-friendly slug",
+        "parameters": [
+          {
+            "name": "text",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

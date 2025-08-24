@@ -1,0 +1,53 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "tzslots API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/slots": {
+      "get": {
+        "summary": "Generate time slots from a start time",
+        "parameters": [
+          {
+            "name": "tz",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "start",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "blocks",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "block_minutes",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

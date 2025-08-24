@@ -1,0 +1,10 @@
+:root { --bg:#0b1220; --fg:#e7ecf3; --muted:#9fb3c8; --accent:#7cc4ff; }
+*{box-sizing:border-box}
+body { margin:0; font-family: system-ui, sans-serif; background:var(--bg); color:var(--fg); }
+header, footer { padding: 16px 24px; background:#0f172a; }
+.brand { font-weight:700; color:var(--fg); text-decoration:none; }
+nav a { color: var(--muted); margin-left: 12px; text-decoration:none; }
+main { padding: 24px; max-width: 900px; margin: 0 auto; }
+h1,h2 { color: var(--fg); }
+a { color: var(--accent); }
+ul { line-height: 1.6; }

@@ -1,0 +1,45 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "schedule API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/schedule": {
+      "get": {
+        "summary": "Generate recurring schedule dates",
+        "parameters": [
+          {
+            "name": "period",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "start",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

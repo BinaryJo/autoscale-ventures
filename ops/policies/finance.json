@@ -1,0 +1,10 @@
+{
+  "principal_usd": 100.0,
+  "spending_locked": true,
+  "unlock_thresholds": {
+    "llm_monthly_usd": 25,
+    "llm_unlock_profit_l60d_usd": 200,
+    "ads_monthly_usd": 50,
+    "ads_unlock_profit_l60d_usd": 500
+  }
+}

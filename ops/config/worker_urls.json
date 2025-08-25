@@ -1,0 +1,6 @@
+{
+  "SLUGIFY_URL":  "https://slugify-worker.binaryjo.workers.dev/api/convert/slugify?text=Hello%20World",
+  "CSV2JSON_URL": "https://csv2json-worker.binaryjo.workers.dev/api/convert/csv2json?csv=a,b%0A1,2",
+  "TZSLOTS_URL":  "https://tzslots-worker.binaryjo.workers.dev/api/slots?tz=America/New_York&start=2025-07-04T12:00:00-04:00&blocks=30&block_minutes=120",
+  "SCHEDULE_URL": "https://schedule-worker.binaryjo.workers.dev/api/schedule?period=monthly&start=2025-01-01&count=12"
+}

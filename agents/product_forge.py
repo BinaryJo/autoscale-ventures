@@ -31,8 +31,8 @@ def build_assets(plan: Plan) -> Dict[str, Any]:
 <header><a class="brand" href="/">AutoScale Ventures</a></header><main>
 <h1>{kw.title()}</h1>
 <p>Niche: {niche}. This page is auto-generated in a zero-cost pipeline.</p>
-<h2>What it does</h2><p>Explains the problem, shows examples, and links to the micro‑API when available.</p>
-<h2>Long‑tail queries</h2><ul>{''.join(f'<li>{lt}</li>' for lt in plan.topic.get('longtails', []))}</ul>
+<h2>What it does</h2><p>Explains the problem, shows examples, and links to the micro-API when available.</p>
+<h2>Long-tail queries</h2><ul>{''.join(f'<li>{lt}</li>' for lt in plan.topic.get('longtails', []))}</ul>
 <p><a href="/posts/">More tools & guides</a></p>
 </main><footer>© {datetime.utcnow().year} AutoScale Ventures</footer></body></html>
 """

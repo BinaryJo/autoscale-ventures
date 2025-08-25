@@ -1,12 +1,11 @@
-# AutoScale Ventures — v2 Template
+# AutoScale Ventures — v2.1
 
-Updated template with four Workers (slugify, csv2json, tzslots, schedule),
-OpenAPI specs, landing pages, daily orchestrator, and principal-protection guardrails.
+Includes:
+- Agents + daily orchestrator (zero-spend)
+- Static site (GitHub Pages)
+- 4 Cloudflare Workers (slugify, csv2json, tzslots, schedule)
+- OpenAPI specs
+- Prefill script for docs pages (`scripts/prefill_docs.py`)
+- Guardrails in `ops/policies/finance.json`
 
-## Quickstart
-1) Fork repo and add optional secrets (SUPABASE_URL/KEY, CF_API_TOKEN, etc.).
-2) Enable **Daily Orchestrator** workflow.
-3) (Optional) Deploy Workers with `npx wrangler deploy` in each worker folder.
-
-## Zero-Dependency Note
-This build avoids non-stdlib dependencies so it runs in this environment. FinanceGuard reads JSON policy.
+See README from earlier steps for setup; this v2.1 adds the docs prefill system.

@@ -1,0 +1,56 @@
+from dataclasses import dataclass
+from typing import Dict, Any
+from datetime import datetime
+from pathlib import Path
+import re
+
+ROOT = Path(__file__).resolve().parents[1]
+SITE = ROOT / "infra" / "site"
+POSTS = SITE / "posts"
+OUTBOUND = ROOT / "data" / "artifacts" / "outbound" / "devto"
+
+@dataclass
+class Plan:
+    topic: Dict[str, Any]
+    lanes: list
+
+def slugify(text: str) -> str:
+    s = re.sub(r"[^a-zA-Z0-9]+", "-", text.lower()).strip("-")
+    return re.sub(r"-{2,}", "-", s)
+
+def plan_assets(brief) -> Plan:
+    return Plan(topic=brief.__dict__, lanes=["seo_page","outbound_post"])
+
+def build_assets(plan: Plan) -> Dict[str, Any]:
+    POSTS.mkdir(parents=True, exist_ok=True)
+    OUTBOUND.mkdir(parents=True, exist_ok=True)
+    kw = plan.topic["keyword"]; niche = plan.topic["niche"]; slug = slugify(kw)
+    html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>{kw} — AutoScale Ventures</title><meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../assets/style.css" rel="stylesheet"></head><body>
+<header><a class="brand" href="/">AutoScale Ventures</a></header><main>
+<h1>{kw.title()}</h1>
+<p>Niche: {niche}. This page is auto-generated in a zero-cost pipeline.</p>
+<h2>What it does</h2><p>Explains the problem, shows examples, and links to the micro-API when available.</p>
+<h2>Long-tail queries</h2><ul>{''.join(f'<li>{lt}</li>' for lt in plan.topic.get('longtails', []))}</ul>
+<p><a href="/posts/">More tools & guides</a></p>
+</main><footer>© {datetime.utcnow().year} AutoScale Ventures</footer></body></html>
+"""
+    page_path = POSTS / f"{slug}.html"
+    page_path.write_text(html, encoding="utf-8")
+    md = f"""---
+title: "{kw.title()} — free tool"
+published: false
+tags: automation, productivity, api
+---
+Auto-generated, free **{kw}** by AutoScale Ventures.
+
+- Niche: **{niche}**
+- Live docs: (add URL after Pages deploy)
+- API endpoint: (add URL after Workers deploy)
+
+*Generated on {datetime.utcnow().isoformat()}*
+"""
+    draft_path = OUTBOUND / f"{slug}.md"
+    draft_path.write_text(md, encoding="utf-8")
+    return {"slug": slug, "seo_page": str(page_path), "outbound_md": str(draft_path)}

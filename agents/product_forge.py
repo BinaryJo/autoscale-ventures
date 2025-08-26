@@ -27,8 +27,8 @@ def build_assets(plan: Plan) -> Dict[str, Any]:
     kw = plan.topic["keyword"]; niche = plan.topic["niche"]; slug = slugify(kw)
     html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <title>{kw} — AutoScale Ventures</title><meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="/assets/style.css" rel="stylesheet"></head><body>
-<header><a class="brand" href="/">AutoScale Ventures</a></header><main>
+<link href="../assets/style.css" rel="stylesheet"></head><body>
+<header><a class="brand" href="../">AutoScale Ventures</a></header><main>
 <h1>{kw.title()}</h1>
 <p>Niche: {niche}. This page is auto-generated in a zero-cost pipeline.</p>
 <h2>What it does</h2><p>Explains the problem, shows examples, and links to the micro-API when available.</p>

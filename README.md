@@ -1,9 +1,6 @@
 # Brain Bridge
 
-Brain Bridge is a cross-platform assistant (iOS, Android, desktop, and web) that connects Google Workspace and alternative suites
-with an AI copilot to support people with neurodivergent and mental health diagnoses. The app focuses on guided tasking,
-context-aware nudges, and safe data handling for autism spectrum disorder, ADHD, CPTSD, anxiety, and major depression, with
-expansion planned for additional conditions.
+Brain Bridge is a cross-platform assistant (iOS, Android, desktop, and web) that connects Google Workspace and alternative suites with an AI copilot to support people with neurodivergent and mental health diagnoses. The app focuses on guided tasking, context-aware nudges, and safe data handling for autism spectrum disorder, ADHD, CPTSD, anxiety, and major depression, with expansion planned for additional conditions.
 
 ## Project assets
 - Product and architecture blueprint: `docs/brain-bridge/brain_bridge_blueprint.md`

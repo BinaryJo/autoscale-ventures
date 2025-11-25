@@ -1,14 +1,23 @@
-# AutoScale Ventures — v2.1
+# Brain Bridge
 
-Includes:
-- Agents + daily orchestrator (zero-spend)
-- Static site (GitHub Pages)
-- 4 Cloudflare Workers (slugify, csv2json, tzslots, schedule)
-- OpenAPI specs
-- Prefill script for docs pages (`scripts/prefill_docs.py`)
-- Guardrails in `ops/policies/finance.json`
+Brain Bridge is a cross-platform assistant (iOS, Android, desktop, and web) that connects Google Workspace and alternative suites
+with an AI copilot to support people with neurodivergent and mental health diagnoses. The app focuses on guided tasking,
+context-aware nudges, and safe data handling for autism spectrum disorder, ADHD, CPTSD, anxiety, and major depression, with
+expansion planned for additional conditions.
 
-See README from earlier steps for setup; this v2.1 adds the docs prefill system.
+## Project assets
+- Product and architecture blueprint: `docs/brain-bridge/brain_bridge_blueprint.md`
+- Delivery and implementation plan: `docs/brain-bridge/implementation_plan.md`
 
-## New project blueprints
-- **Brain Bridge:** Cross-platform (iOS, Android, desktop, web) connector for Google Workspace and alternative suites with an AI co-pilot tailored to neurodivergent users and mental health support. See `docs/brain-bridge/brain_bridge_blueprint.md` for the product/architecture overview and `docs/brain-bridge/implementation_plan.md` for delivery details.
+## Repository structure
+- `docs/brain-bridge/` — planning and design documents
+- `agents/` — automation agents and helpers
+- `infra/` — static site assets and deployment artifacts
+- `ops/` — operational guardrails and policies
+- `scripts/` — utilities such as documentation prefill
+- `data/` — supporting datasets (if any)
+
+## Getting started
+1. Install Python requirements: `pip install -r requirements.txt`
+2. Review the blueprint and implementation plan in `docs/brain-bridge/`
+3. Use the agents in `agents/` to prototype integrations and workflows

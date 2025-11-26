@@ -1,4 +1,4 @@
-# AutoScale Ventures — v2.1
+# Brain Bridge — v2.1
 
 Includes:
 - Agents + daily orchestrator (zero-spend)

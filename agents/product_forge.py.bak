@@ -26,15 +26,15 @@ def build_assets(plan: Plan) -> Dict[str, Any]:
     OUTBOUND.mkdir(parents=True, exist_ok=True)
     kw = plan.topic["keyword"]; niche = plan.topic["niche"]; slug = slugify(kw)
     html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
-<title>{kw} — AutoScale Ventures</title><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{kw} — Brain Bridge</title><meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="../assets/style.css" rel="stylesheet"></head><body>
-<header><a class="brand" href="/">AutoScale Ventures</a></header><main>
+<header><a class="brand" href="/">Brain Bridge</a></header><main>
 <h1>{kw.title()}</h1>
 <p>Niche: {niche}. This page is auto-generated in a zero-cost pipeline.</p>
 <h2>What it does</h2><p>Explains the problem, shows examples, and links to the micro-API when available.</p>
 <h2>Long-tail queries</h2><ul>{''.join(f'<li>{lt}</li>' for lt in plan.topic.get('longtails', []))}</ul>
 <p><a href="/posts/">More tools & guides</a></p>
-</main><footer>© {datetime.utcnow().year} AutoScale Ventures</footer></body></html>
+</main><footer>© {datetime.utcnow().year} Brain Bridge</footer></body></html>
 """
     page_path = POSTS / f"{slug}.html"
     page_path.write_text(html, encoding="utf-8")
@@ -43,7 +43,7 @@ title: "{kw.title()} — free tool"
 published: false
 tags: automation, productivity, api
 ---
-Auto-generated, free **{kw}** by AutoScale Ventures.
+Auto-generated, free **{kw}** by Brain Bridge.
 
 - Niche: **{niche}**
 - Live docs: (add URL after Pages deploy)

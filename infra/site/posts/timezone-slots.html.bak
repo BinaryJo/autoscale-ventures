@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
-<title>Time-Zone Slots — AutoScale</title><meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="../assets/style.css" rel="stylesheet"></head><body><header><a class="brand" href="../">AutoScale Ventures</a></header><main>
+<title>Time-Zone Slots — Brain Bridge</title><meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../assets/style.css" rel="stylesheet"></head><body><header><a class="brand" href="../">Brain Bridge</a></header><main>
 <h1>Time-Zone Slot Builder</h1><p>API: <code>https://tzslots-worker.<YOUR_SUBDOMAIN>.workers.dev/api/slots?tz=America/New_York&start=2025-07-04T12:00:00-04:00&blocks=30&block_minutes=120</code></p>
-</main><footer>© 2025 AutoScale Ventures</footer></body></html>
+</main><footer>© 2025 Brain Bridge</footer></body></html>

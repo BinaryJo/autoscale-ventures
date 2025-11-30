@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
-<title>CSV → JSON — AutoScale</title><meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="../assets/style.css" rel="stylesheet"></head><body><header><a class="brand" href="../">AutoScale Ventures</a></header><main>
+<title>CSV → JSON — Brain Bridge</title><meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../assets/style.css" rel="stylesheet"></head><body><header><a class="brand" href="../">Brain Bridge</a></header><main>
 <h1>CSV → JSON Converter</h1><p>GET/POST: <code>https://csv2json-worker.<YOUR_SUBDOMAIN>.workers.dev/api/convert/csv2json?csv=a,b%0A1,2</code></p>
-</main><footer>© 2025 AutoScale Ventures</footer></body></html>
+</main><footer>© 2025 Brain Bridge</footer></body></html>
